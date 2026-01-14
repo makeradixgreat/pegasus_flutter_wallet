@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pegasus_wallet/features/bottom_bar/bottom_bar_bloc.dart';
 import 'package:pegasus_wallet/router/app_router.dart';
 
 void main() {
@@ -11,13 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appRouter = AppRouter();
-    return MaterialApp(
-      title: 'Radix Wallet Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return BlocProvider(
+      create: (context) => BottomBarBloc(),
+      child: MaterialApp(
+        title: 'Radix Wallet Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        onGenerateRoute: appRouter.onGenerateRoute,
       ),
-      onGenerateRoute: appRouter.onGenerateRoute,
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pegasus_wallet/splash_screen.dart';
+import 'package:pegasus_wallet/bootstrap/splash_screen.dart';
 import 'package:pegasus_wallet/view/home/home_page.dart';
 import 'package:pegasus_wallet/view/settings/settings_page.dart';
 

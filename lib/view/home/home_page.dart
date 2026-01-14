@@ -30,20 +30,21 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: 2,
+                  itemCount: 8,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 12.0),
                       child: AccountCardWidget(
-                        accountName: index == 0
+                        accountName: index % 2 == 0
                             ? 'My Account'
                             : 'Diogo Account',
-                        accountId: index == 0
+                        accountId:  index % 2 == 0
                             ? 'acco...asdj29y'
                             : 'acco...asd2yd',
-                        amount: index == 0 ? '16 704,13' : '1253,12',
-                        gradient: index == 0
+                        amount: index % 2 == 0 ? '16 704,13' : '1253,12',
+                        gradient:  index % 2 == 0
                             ? LinearGradient(
                                 colors: [
                                   Colors.blue[800]!,
@@ -68,6 +69,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const CreateAccountButton(),
+              SizedBox(height: 20),
             ],
           ),
         ),
