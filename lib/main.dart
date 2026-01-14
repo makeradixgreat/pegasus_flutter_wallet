@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pegasus_wallet/router/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,12 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = AppRouter();
     return MaterialApp(
-      title: 'Pegasus Wallet',
+      title: 'Radix Wallet Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: Container(),
+      onGenerateRoute: appRouter.onGenerateRoute,
     );
   }
 }
