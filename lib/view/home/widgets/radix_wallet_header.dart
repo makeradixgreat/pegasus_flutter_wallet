@@ -13,20 +13,20 @@ class RadixWalletHeader extends StatelessWidget {
           'Radix Wallet',
           style: TextStyle(
             color: context.baseTitleColor,
-            fontSize: 32.0,
+            fontSize: 32,
             fontWeight: FontWeight.w900,
             letterSpacing: 1.5,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 2.0),
+          padding: const EdgeInsets.only(top: 2),
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.65,
             child: Text(
               'Welcome. Here are all your Accounts on the Radix Network.',
               style: TextStyle(
                 color: context.baseSubtitleColor,
-                fontSize: 15.0,
+                fontSize: 15,
                 fontWeight: FontWeight.w600,
               ),
             ),

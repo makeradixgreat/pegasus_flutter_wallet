@@ -7,20 +7,20 @@ class TotalValueWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 24.0),
+      padding: const EdgeInsets.only(top: 24),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             'TOTAL VALUE',
             style: TextStyle(
-              fontSize: 16.0,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
               color: context.baseSubtitleColor,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 8.0),
+            padding: const EdgeInsets.only(top: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -30,7 +30,7 @@ class TotalValueWidget extends StatelessWidget {
                       TextSpan(
                         text: 'US\$',
                         style: TextStyle(
-                          fontSize: 18.0, // Smaller font size
+                          fontSize: 18, // Smaller font size
                           fontWeight:
                               FontWeight.w600, // Less strong font weight
                           color: context.baseTitleColor,
@@ -39,7 +39,7 @@ class TotalValueWidget extends StatelessWidget {
                       TextSpan(
                         text: '16 704,',
                         style: TextStyle(
-                          fontSize: 26.0, // Bigger font size
+                          fontSize: 26, // Bigger font size
                           fontWeight: FontWeight.bold, // Bold font weight
                           color: context.baseTitleColor,
                         ),
@@ -47,7 +47,7 @@ class TotalValueWidget extends StatelessWidget {
                       TextSpan(
                         text: '17',
                         style: TextStyle(
-                          fontSize: 18.0, // Same smaller font size as 'US$'
+                          fontSize: 18, // Same smaller font size as 'US$'
                           fontWeight:
                               FontWeight.w600, // Less strong font weight
                           color: context.baseTitleColor,
@@ -56,11 +56,11 @@ class TotalValueWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 8.0),
+                const SizedBox(width: 8),
                 const Icon(
                   Icons.remove_red_eye,
                   color: Colors.grey,
-                  size: 22.0,
+                  size: 22,
                 ),
               ],
             ),

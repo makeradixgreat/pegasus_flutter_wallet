@@ -13,9 +13,9 @@ class CreateAccountButton extends StatelessWidget {
         height: 50,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12.0),
+              borderRadius: BorderRadius.circular(12),
             ),
           ),
           onPressed: () {},

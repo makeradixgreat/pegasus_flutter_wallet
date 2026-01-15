@@ -42,8 +42,8 @@ class _MainScreenState extends State<MainScreen> {
               top: false,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 15.0,
-                  vertical: 12.0,
+                  horizontal: 15,
+                  vertical: 12,
                 ),
                 child: GNav(
                   selectedIndex: visibleTabs.indexOf(state.selectedTab),
@@ -57,8 +57,8 @@ class _MainScreenState extends State<MainScreen> {
                   color: Colors.white70,
                   activeColor: context.baseTitleColor,
                   tabBackgroundColor: Colors.black26,
-                  gap: 8.0,
-                  padding: const EdgeInsets.all(12.0),
+                  gap: 8,
+                  padding: const EdgeInsets.all(12),
                   tabs: visibleTabs
                       .map((tab) => _buildTab(tab, state.selectedTab))
                       .toList(),
@@ -86,7 +86,7 @@ class _MainScreenState extends State<MainScreen> {
     }
   }
 
-  /// TODO: Return localized title for each tab.
+  // TODO(hollow): Return localized title for each tab.
   String _getAppBarTitle(SelectedTab selectedTab) {
     switch (selectedTab) {
       case SelectedTab.home:
@@ -98,7 +98,7 @@ class _MainScreenState extends State<MainScreen> {
 
   /// Build a GButton for the given tab.
   GButton _buildTab(SelectedTab tab, SelectedTab currentTab) {
-    final bool isActive = currentTab == tab;
+    final isActive = currentTab == tab;
 
     // Default tabs with material icons
     IconData icon;

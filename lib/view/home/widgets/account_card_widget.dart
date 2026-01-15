@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 
 class AccountCardWidget extends StatelessWidget {
-  final String accountName;
-  final String accountId;
-  final String amount;
-  final Gradient gradient;
   const AccountCardWidget({
-    super.key,
     required this.gradient,
     required this.accountName,
     required this.accountId,
     required this.amount,
+    super.key,
   });
+  final String accountName;
+  final String accountId;
+  final String amount;
+  final Gradient gradient;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(14.0),
+        borderRadius: BorderRadius.circular(14),
         gradient: gradient,
       ),
       child: Card(
-        elevation: 2.0,
+        elevation: 2,
         shadowColor: Colors.transparent,
         color: Colors.transparent,
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
               Row(
@@ -35,7 +35,7 @@ class AccountCardWidget extends StatelessWidget {
                     accountName,
                     style: const TextStyle(
                       fontWeight: FontWeight.w700,
-                      fontSize: 16.0,
+                      fontSize: 16,
                       color: Colors.white,
                     ),
                   ),
@@ -43,7 +43,7 @@ class AccountCardWidget extends StatelessWidget {
                     'US\$$amount',
                     style: const TextStyle(
                       fontWeight: FontWeight.w700,
-                      fontSize: 17.0,
+                      fontSize: 17,
                       color: Colors.white,
                     ),
                   ),
@@ -55,18 +55,14 @@ class AccountCardWidget extends StatelessWidget {
                     accountId,
                     style: const TextStyle(color: Colors.white60),
                   ),
-                  const SizedBox(width: 6.0),
-                  const Icon(Icons.copy, size: 14.0, color: Colors.white54),
+                  const SizedBox(width: 6),
+                  const Icon(Icons.copy, size: 14, color: Colors.white54),
                 ],
               ),
-              const SizedBox(height: 20.0),
+              const SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Image.asset(
-                  'assets/xrd.webp',
-                  width: 28.0,
-                  height: 28.0,
-                ),
+                child: Image.asset('assets/xrd.webp', width: 28, height: 28),
               ),
             ],
           ),

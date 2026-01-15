@@ -1,7 +1,7 @@
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:pegasus_wallet/core/theme/app_theme.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:pegasus_wallet/core/theme/app_theme.dart';
 
 part 'theme_state.dart';
 
