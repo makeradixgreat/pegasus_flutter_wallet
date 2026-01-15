@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pegasus_wallet/core/core.dart';
 
 class TotalValueWidget extends StatelessWidget {
   const TotalValueWidget({super.key});
@@ -10,12 +11,13 @@ class TotalValueWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'TOTAL VALUE',
             style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w600,
-                color: Colors.black38),
+              fontSize: 16.0,
+              fontWeight: FontWeight.w600,
+              color: context.baseSubtitleColor,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
@@ -23,15 +25,15 @@ class TotalValueWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 RichText(
-                  text: const TextSpan(
+                  text: TextSpan(
                     children: [
                       TextSpan(
                         text: 'US\$',
                         style: TextStyle(
                           fontSize: 18.0, // Smaller font size
                           fontWeight:
-                          FontWeight.w600, // Less strong font weight
-                          color: Colors.black,
+                              FontWeight.w600, // Less strong font weight
+                          color: context.baseTitleColor,
                         ),
                       ),
                       TextSpan(
@@ -39,7 +41,7 @@ class TotalValueWidget extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 26.0, // Bigger font size
                           fontWeight: FontWeight.bold, // Bold font weight
-                          color: Colors.black,
+                          color: context.baseTitleColor,
                         ),
                       ),
                       TextSpan(
@@ -47,8 +49,8 @@ class TotalValueWidget extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18.0, // Same smaller font size as 'US$'
                           fontWeight:
-                          FontWeight.w600, // Less strong font weight
-                          color: Colors.black,
+                              FontWeight.w600, // Less strong font weight
+                          color: context.baseTitleColor,
                         ),
                       ),
                     ],

@@ -24,9 +24,6 @@ class SettingsPage extends StatelessWidget {
       ),
     ];
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Back', style: TextStyle(fontSize: 20.0)),
-      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
         child: Column(

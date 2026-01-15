@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pegasus_wallet/core/core.dart';
 
 class RadixWalletHeader extends StatelessWidget {
   const RadixWalletHeader({super.key});
@@ -8,18 +9,26 @@ class RadixWalletHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Radix Wallet',
           style: TextStyle(
-              fontSize: 32.0, fontWeight: FontWeight.w900, letterSpacing: 1.5),
+            color: context.baseTitleColor,
+            fontSize: 32.0,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 1.5,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 2.0),
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.65,
-            child: const Text(
+            child: Text(
               'Welcome. Here are all your Accounts on the Radix Network.',
-              style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black38),
+              style: TextStyle(
+                color: context.baseSubtitleColor,
+                fontSize: 15.0,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ),

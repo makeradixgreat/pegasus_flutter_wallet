@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pegasus_wallet/view/home/home_page.dart';
+import 'package:pegasus_wallet/view/main_screen.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -14,7 +14,7 @@ class _SplashPageState extends State<SplashPage> {
       context,
       PageRouteBuilder(
         pageBuilder: (context, animation, secondaryAnimation) =>
-            const HomePage(),
+            const MainScreen(),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           const begin = 0.0;
           const end = 1.0;

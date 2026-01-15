@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pegasus_wallet/core/core.dart';
 
 class CreateAccountButton extends StatelessWidget {
   const CreateAccountButton({super.key});
@@ -18,12 +19,13 @@ class CreateAccountButton extends StatelessWidget {
             ),
           ),
           onPressed: () {},
-          child: const Text(
+          child: Text(
             'Create a New Account',
             style: TextStyle(
-                color: Colors.black87,
-                fontWeight: FontWeight.w600,
-                fontSize: 16.5),
+              color: context.baseTitleColor,
+              fontWeight: FontWeight.w600,
+              fontSize: 16.5,
+            ),
           ),
         ),
       ),
